@@ -2,8 +2,13 @@
 import cgi
 import sys
 import io
-print("Content-type: text/html; charset=utf-8")
+import test
+from tests import aaa
+
 print("")
+
+bb = aaa.AAA()
+bb.test()
 
 class MySampleClass:
     def __init__(self):
