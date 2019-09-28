@@ -1,7 +1,7 @@
 import os
 class Route:
     @classmethod
-    def search(self,path):
+    def search(cls, path):
         temp = (os.environ["REQUEST_URI"]).split('/')
         route = ""
         isRoute = False

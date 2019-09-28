@@ -2,7 +2,7 @@ import os
 import json
 class Conf:
     @classmethod
-    def OpenEnv(self,key):
+    def OpenEnv(cls,key):
         f = open('.env')
         env = f.read()
         f.close()
