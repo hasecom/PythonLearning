@@ -10,7 +10,6 @@ class Connection:
                     db=c.Conf.OpenEnv("DB_NAME"),
                     charset='utf8',
                     cursorclass=pymysql.cursors.DictCursor)
-        #self.data = sql
         with connection.cursor() as cursor:
             cursor.execute(sql,vals)
             dbdata = cursor.fetchall()

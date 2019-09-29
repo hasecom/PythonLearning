@@ -1,9 +1,13 @@
 from Views import index
-from App.Database import connection as c
+from App.Controllers import TopController
 from datetime import datetime
-class TopController:
+class Api:
     @classmethod
-    def Index(cls):
+    def first(cls):
+        data = {
+            "aa":"1",
+            "bb":"2"
+            }
         obj = ''
         f = open('App/Yields/index.html')
         html = f.read()

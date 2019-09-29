@@ -1,7 +1,31 @@
-<div>
-    <form action="">
-        <input type="text" value="">
-        <input type="text" value="">
-        <input type="submit" value="送信">
-    </form>
+<div class="bg-info">
+    kkkkkkkkkkkkk
+    <button id="AjaxSend">oo</button>
+    %(cnt)s
 </div>
+<script>
+    $("#AjaxSend").on('click',function(){
+        $.ajax({
+            url:'./api/first',
+            type:'POST',
+            dataType: 'html',
+            data:{
+
+            }
+        })
+        // Ajaxリクエストが成功した時発動
+        .done( (data) => {
+            $('body').html(data);
+        })
+        // Ajaxリクエストが失敗した時発動
+        .fail( (data) => {
+            $('.result').html(data);
+            console.log(data);
+        })
+        // Ajaxリクエストが成功・失敗どちらでも発動
+        .always( (data) => {
+
+        });
+    })
+</script>
+
