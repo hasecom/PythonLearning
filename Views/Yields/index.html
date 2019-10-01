@@ -3,19 +3,13 @@
     <button id="AjaxSend">oo</button>
     %(cnt)s
 </div>
-<script>
-    $("#AjaxSend").on('click',function(){
-        $.ajax({
-            url:'./api/first',
-            type:'POST',
-            dataType: 'html',
-            data:{
+<div id="fire">aa</div>
 
-            }
-        })
-        .done( (data) => {
-            $('body').html(data);
-        })
-    })
+<script type="module">
+    import * as ajax from "./Views/Assets/js/ajax.js";
+
+    $("#AjaxSend").on('click',function(){
+        ajax.Send();
+    });
 </script>
 
