@@ -1,15 +1,15 @@
-<div class="bg-info">
-    kkkkkkkk
-    <button id="AjaxSend">oo</button>
+<div class="firstView">
+    <h3 class="title">Question</h3>
+    <div class="question px-3 py-2 font-weight-bold">Q.それって楽しい？</div>
+    <div class="AjaxSend hovergray btn shadow-sm border pointer d-block mx-3 my-4 w-10">はい</div>
+    <div class="AjaxSend hovergray btn shadow-sm border pointer d-block mx-3 my-4 w-10">いいえ</div>
     %(cnt)s
 </div>
-<div id="fire">aa</div>
+
 
 <script type="module">
-    import * as ajax from "./Views/Assets/js/ajax.js";
+import * as idx from "./Views/Assets/js/index.js";
+idx.ParamSet("a");
 
-    $("#AjaxSend").on('click',function(){
-        ajax.Send();
-    });
 </script>
 

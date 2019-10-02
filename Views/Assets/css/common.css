@@ -1,6 +1,21 @@
-#app{
-    background:#ecf0f1;
+html,body{
+    margin:0 auto;
+    width:100%;
 }
-#fire{
-    color:red;
+.title{
+    color:#e74c3c;
+}
+.pointer{
+    cursor: pointer;
+}
+.firstView{
+    background:rgba(255,255,255,1);
+}
+.question{
+    color:#ecf0f1;
+    background:#e74c3c;
+}
+
+.hovergray:hover{
+    background:rgba(250,250,250,1);
 }
