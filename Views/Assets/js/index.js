@@ -4,16 +4,16 @@ $(function(){
 });
 
 function dom(){
-    $(".firstView").css({
-        width:$(window).width() + "px",
-        height:$(window).height() + "px",
-    });
+
 }
 let ajaxParam;
+let aaa = "";
 export function ParamSet(val){
     ajaxParam = val;
 }
-$(document).on('click','.AjaxSend',function(){
+$(document).on('click','.AjaxSend',function(event){
+    console.log(aaa)
+    event.preventDefault();
     $.ajax({
         url:'./api/first',
         type:'POST',
@@ -25,6 +25,6 @@ $(document).on('click','.AjaxSend',function(){
     .done( (data) => {
         $('body').html(data);
         dom();
+        aaa = "aa";
     })
 })
-

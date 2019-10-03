@@ -3,7 +3,7 @@ from App import config as c
 
 class Connection:
     data = []
-    def __init__(self, sql,vals):
+    def __init__(self, sql, val = None):
         connection = pymysql.connect(host=c.Conf.OpenEnv("DB_HOST"),
                     user=c.Conf.OpenEnv("DB_USER"),
                     password=c.Conf.OpenEnv("DB_PASS"),
@@ -11,8 +11,8 @@ class Connection:
                     charset='utf8',
                     cursorclass=pymysql.cursors.DictCursor)
         with connection.cursor() as cursor:
-            cursor.execute(sql,vals)
+            cursor.execute(sql,val)
             dbdata = cursor.fetchall()
-            self.data = dbdata
+        self.data = dbdata
                     
         connection.close()
