@@ -12,7 +12,6 @@ export function ParamSet(val){
     ajaxParam = val;
 }
 $(document).on('click','.AjaxSend',function(event){
-    console.log(aaa)
     event.preventDefault();
     $.ajax({
         url:'./api/first',
